@@ -1,15 +1,14 @@
 from card_file import Card
 from evaluate_hand import hands
 import numpy as np
+from calculate_odds import calculate
 
-main_player = [Card(7,'H'),Card(2,'C')]
-drawn_cards = [Card(10,'S'), Card(9,'S'), Card (5,'H')]
+main_player = [Card(7,'H'),Card(7,'C')]
+drawn_cards = [Card(7,'S'), Card(6,'D'), Card (5,'H'),Card (10,'H'),Card (13,'H')]
 
 number_of_opponents = 2
 
-cards = np.array([Card(8,'C'), Card(11,'H'),Card(12,'H'),Card(10,'H'),Card(9,'H')])
-
-print(hands(cards))
-
+print(calculate(main_player, drawn_cards,100))
+3
 
 
